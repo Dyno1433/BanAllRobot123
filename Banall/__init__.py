@@ -25,8 +25,6 @@ class Config:
 
     if not APP_ID:
         raise ValueError("API_ID not set, set it first")
-    if not OWNER:
-        raise ValueError("OWNER_ID not set, set it first")
     if not LOGGER:
         raise ValueError("LOG_ID not set set i first")
        
