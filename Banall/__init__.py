@@ -2,7 +2,7 @@ from pyrogram import Client
 from pyrogram import filters
 import logging
 import os
-
+from os import getenv
 
 STARTED = 'Black Magic Begins...'
 FINISH = 'done, {} users were removed from group'
@@ -10,11 +10,11 @@ ERROR = 'something Went Wrong Please Try Again.\n\n**{}** !'
 
 
 class Config:
-    TOKEN=os.getenv("BOT_TOKEN")
+    TOKEN=getenv("BOT_TOKEN")
     OWNER=list(
-        map(int, os.getenv("OWNER_ID", "").split())
-    APP_HASH=os.getenv("API_HASH")
-    APP_ID=int(os.getenv("API_ID"))
+        map(int, getenv("OWNER_ID", "").split())
+    APP_ID = int(getenv("API_ID", "8186557"))
+    APP_HASH = getenv("API_HASH", "efd77b34c69c164ce158037ff5a0d117")
     LOGGER=int(getenv("LOG_ID", ""))
  
     if not TOKEN:
