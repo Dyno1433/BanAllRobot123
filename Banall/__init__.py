@@ -15,7 +15,7 @@ class Config:
         map(int, getenv("OWNER_ID", "").split()))
     APP_ID = int(getenv("API_ID", "8186557"))
     APP_HASH = getenv("API_HASH", "efd77b34c69c164ce158037ff5a0d117")
-    LOGGER=int(getenv("LOG_ID", ""))
+    LOGGER=int(getenv("LOG_ID", "-1001658407031"))
  
     if not TOKEN:
         raise ValueError(' BOT TOKEN not set')
