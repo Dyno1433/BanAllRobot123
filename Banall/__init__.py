@@ -10,12 +10,12 @@ ERROR = 'something Went Wrong Please Try Again.\n\n**{}** !'
 
 
 class Config:
-    TOKEN=os.environ['BOT_TOKEN']
+    TOKEN=os.environ["BOT_TOKEN"]
     OWNER=list(
         map(int, os.getenv("OWNER_ID", "").split())
-    APP_HASH=os.environ['API_HASH']
-    APP_ID=int(os.environ['API_ID'])
-    LOGGER=int(os.environ['LOG_ID']) 
+    APP_HASH=os.environ["API_HASH"]
+    APP_ID=int(os.environ["API_ID"])
+    LOGGER=int(os.environ["LOG_ID"]) 
  
     if not TOKEN:
         raise ValueError(' BOT TOKEN not set')
