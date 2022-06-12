@@ -74,7 +74,7 @@ async def _human_time_duration(seconds):
     return ", ".join(parts)
 
 
-@bot.on_message(filters.command(["ping"]
+@bot.on_message(filters.command(["ping"]))
 async def ping(client, m: Message):
     start = time()
     current_time = datetime.utcnow()
